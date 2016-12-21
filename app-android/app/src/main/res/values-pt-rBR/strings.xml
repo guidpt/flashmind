@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashMind</string>
+    <string name="loading_message">Carregando...</string>
+    <string name="ERROR_MESSAGE_NO_CONNECTION">Sem conexão com a internet.</string>
+    <string name="LABEL_DECKS">Decks</string>
+    <string name="LABEL_LAST_DECKS">Decks recentes</string>
+</resources>

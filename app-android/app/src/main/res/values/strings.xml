@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FlashMind</string>
+    <string name="loading_message">Carregando...</string>
+    <string name="ERROR_MESSAGE_NO_CONNECTION">Sem conexão com a internet.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="LABEL_DECKS">Decks</string>
+    <string name="LABEL_LAST_DECKS">Decks recentes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
