@@ -52,10 +52,6 @@ public class MyDecksPresenter {
         //TODO: Share deck
     }
 
-    public void onBtnCreateDeckTouched(){
-        mView.navigateToCreateDeckActivity();
-    }
-
     public void onBtnPlaySelectedDeckTouched() {
         mView.navigateToPlayDeckActivity(mSelectedDeck);
     }
@@ -68,6 +64,10 @@ public class MyDecksPresenter {
         mView.navigateToEditDeckActivity(mSelectedDeck);
     }
 
+    public void onBtnConfirmCreationTouched(String deckName) {
+        mView.navigateToCreateDeckActivity(deckName);
+    }
+
     public interface IMyDecksView{
         void setupRecyclerView();
 
@@ -75,7 +75,7 @@ public class MyDecksPresenter {
 
         void setPresenter(MyDecksPresenter presenter);
 
-        void navigateToCreateDeckActivity();
+        void navigateToCreateDeckActivity(String deckName);
 
         void showDeckOptionsDialog();
 

@@ -16,4 +16,5 @@
     <string name="LABEL_BEST_SCORE">Melhor pontuação:</string>
     <string name="LABEL_TRAIN_COUNT">Treinos realizados:</string>
     <string name="LABEL_PLAY_COUNT">Jogadas realizadas:</string>
+    <string name="HINT_DECK_NAME">Nome do deck</string>
 </resources>

@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -100,7 +101,7 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
     }
 
     @Override
-    public void navigateToCreateDeckActivity() {
+    public void navigateToCreateDeckActivity(String deckName) {
 
     }
 
@@ -131,9 +132,30 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
                         mPresenter.onBtnEditSelectedDeckTouched();
                     }
                 })
-                .create();
+                .create()
+                .show();
+    }
 
-        builder.show();
+    @Override
+    public void showCreateNewDeckDialog() {
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_new_deck, null);
+
+        final EditText mDeckName = ButterKnife.findById(dialoglayout, R.id.etDeckName);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setView(dialoglayout)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mPresenter.onBtnConfirmCreationTouched(mDeckName.getText().toString());
+                    }
+                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+        }).create().show();
     }
 
     @Override
