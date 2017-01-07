@@ -3,10 +3,17 @@ package br.com.nome.flashmind.ui.activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.View;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.Interpolator;
 
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
+import com.transitionseverywhere.Slide;
+import com.transitionseverywhere.Transition;
+import com.transitionseverywhere.TransitionManager;
 
 import br.com.nome.flashmind.R;
 import br.com.nome.flashmind.logic.presenter.MainPresenter;
@@ -15,6 +22,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements MainPresenter.IMainView {
+
+    private static final int DURATION = 1500;
+    private static final Interpolator INTERPOLATOR = new DecelerateInterpolator(5);
+
 
     @BindView(R.id.bottomNavigation)
     protected SpaceNavigationView bottomNavigation;
@@ -87,6 +98,29 @@ public class MainActivity extends BaseActivity implements MainPresenter.IMainVie
 
             }
         });
+    }
+
+    @Override
+    public void hideBottomNavigation() {
+        Transition slide = new Slide(Gravity.BOTTOM);
+        slide.addTarget(bottomNavigation);
+        slide.setDuration(600);
+        slide.setInterpolator(new DecelerateInterpolator());
+        TransitionManager.beginDelayedTransition(bottomNavigation, slide);
+        bottomNavigation.setVisibility(View.GONE);
+
+    }
+
+    @Override
+    public void showBottomNavigation() {
+        Transition slide = new Slide(Gravity.BOTTOM);
+        slide.addTarget(bottomNavigation);
+        slide.setDuration(600);
+        slide.setInterpolator(new DecelerateInterpolator());
+        TransitionManager.beginDelayedTransition(bottomNavigation, slide);
+        bottomNavigation.setVisibility(View.VISIBLE);
+
+
     }
     //endregion
 }

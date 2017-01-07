@@ -3,7 +3,7 @@ apply plugin: 'android-apt'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "br.com.nome.flashmind"
         minSdkVersion 16
@@ -30,6 +30,7 @@ dependencies {
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
     compile "com.android.support:support-v13:$rootProject.supportLibraryVersion"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
     compile "com.google.guava:guava:$rootProject.guavaVersion"
     compile 'com.google.code.gson:gson:2.6.2'
 
@@ -51,6 +52,13 @@ dependencies {
     //Reactive Extensions for Android
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.1.6'
+
+    //RxBus
+    compile 'net.jokubasdargis.rxbus:rxbus:2.0.0'
+    compile 'net.jokubasdargis.rxbus:rxbus-android:2.0.0'
+
+    //View animation
+    compile "com.andkulikov:transitionseverywhere:1.7.0"
 
     //Mockito and PowerMockito Test Frameworks
     testCompile "org.mockito:mockito-core:2.1.0"

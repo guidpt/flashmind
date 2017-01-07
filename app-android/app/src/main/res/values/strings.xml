@@ -8,4 +8,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="LABEL_EMPTY_DECK_COUNT">0 Cards</string>
 </resources>
