@@ -1,14 +1,17 @@
 package br.com.nome.flashmind.ui.fragments;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -98,18 +101,61 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
     }
 
     @Override
-    public void navigateToCreateDeckActivity() {
+    public void navigateToCreateDeckActivity(String deckName) {
 
     }
 
     @Override
     public void showDeckOptionsDialog() {
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_deck_option, null);
 
+        //TODO: Set layout components values
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setView(dialoglayout)
+                .setPositiveButton(getString(R.string.BUTTON_PLAY_TEXT), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mPresenter.onBtnPlaySelectedDeckTouched();
+                    }
+                })
+                .setNegativeButton(getString(R.string.BUTTON_TRAIN_TEXT), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mPresenter.onBtnTrainSelectedDeckTouched();
+                    }
+                })
+                .setNeutralButton(getString(R.string.BUTTON_EDIT_TEXT), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mPresenter.onBtnEditSelectedDeckTouched();
+                    }
+                })
+                .create()
+                .show();
     }
 
     @Override
-    public void navigateToPlayDeckActivity(Deck mSelectedDeck) {
+    public void showCreateNewDeckDialog() {
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_new_deck, null);
 
+        final EditText mDeckName = ButterKnife.findById(dialoglayout, R.id.etDeckName);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setView(dialoglayout)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mPresenter.onBtnConfirmCreationTouched(mDeckName.getText().toString());
+                    }
+                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+        }).create().show();
     }
 
     @Override
@@ -117,8 +163,19 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
 
     }
 
+
+    @Override
+    public void navigateToPlayDeckActivity(Deck mSelectedDeck) {
+
+    }
+
     @Override
     public void navigateToEditDeckActivity(Deck mSelectedDeck) {
+
+    }
+
+    @Override
+    public void navigateToTrainDeckActivity(Deck selectedDeck) {
 
     }
     //endregion

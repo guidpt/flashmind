@@ -11,6 +11,7 @@ public class MyDecksPresenter {
     private IMyDecksView mView;
     private ArrayList<Deck> mDecks;
     private int mSelectedPosition;
+    private Deck mSelectedDeck;
 
     public MyDecksPresenter(IMyDecksView mView) {
         this.mView = mView;
@@ -33,15 +34,14 @@ public class MyDecksPresenter {
     }
 
     public void onDeckTouched(int position){
-        mSelectedPosition = position;
+        if(position == 0){
+            mView.showCreateNewDeckDialog();
+            return;
+        }
+        mSelectedPosition = position-1;
+        mSelectedDeck = mDecks.get(mSelectedPosition);
         mView.showDeckOptionsDialog();
     }
-
-    public void onBtnPlayDeckTouched(){
-        Deck mSelectedDeck = mDecks.get(mSelectedPosition);
-        mView.navigateToPlayDeckActivity(mSelectedDeck);
-    }
-
     public void onBtnDeleteDeckTouched(){
         mDecks.remove(mSelectedPosition);
         mView.removeDeck(mSelectedPosition);
@@ -49,33 +49,44 @@ public class MyDecksPresenter {
 
     public void onBtnShareDeckTouched(){
         //TODO: Check if user is logged in
-        Deck mSelectedDeck = mDecks.get(mSelectedPosition);
         //TODO: Share deck
     }
 
-    public void onBtnEditDeckTouched(){
-        Deck mSelectedDeck = mDecks.get(mSelectedPosition);
+    public void onBtnPlaySelectedDeckTouched() {
+        mView.navigateToPlayDeckActivity(mSelectedDeck);
+    }
+
+    public void onBtnTrainSelectedDeckTouched() {
+        mView.navigateToTrainDeckActivity(mSelectedDeck);
+    }
+
+    public void onBtnEditSelectedDeckTouched() {
         mView.navigateToEditDeckActivity(mSelectedDeck);
     }
 
-    public void onBtnCreateDeckTouched(){
-        mView.navigateToCreateDeckActivity();
+    public void onBtnConfirmCreationTouched(String deckName) {
+        mView.navigateToCreateDeckActivity(deckName);
     }
 
     public interface IMyDecksView{
         void setupRecyclerView();
+
         void populateRecyclerView(ArrayList<Deck> decks);
 
         void setPresenter(MyDecksPresenter presenter);
 
-        void navigateToCreateDeckActivity();
+        void navigateToCreateDeckActivity(String deckName);
 
         void showDeckOptionsDialog();
 
-        void navigateToPlayDeckActivity(Deck mSelectedDeck);
+        void showCreateNewDeckDialog();
 
         void removeDeck(int mSelectedPosition);
 
-        void navigateToEditDeckActivity(Deck mSelectedDeck);
+        void navigateToPlayDeckActivity(Deck selectedDeck);
+
+        void navigateToEditDeckActivity(Deck selectedDeck);
+
+        void navigateToTrainDeckActivity(Deck selectedDeck);
     }
 }

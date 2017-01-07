@@ -9,4 +9,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="LABEL_EMPTY_DECK_COUNT">0 Cards</string>
+    <string name="BUTTON_PLAY_TEXT">Jogar</string>
+    <string name="BUTTON_TRAIN_TEXT">Treinar</string>
+    <string name="BUTTON_EDIT_TEXT">Editar</string>
+    <string name="LABEL_CARDS_NUMBER">Numero de cartas:</string>
+    <string name="LABEL_BEST_SCORE">Melhor pontuação:</string>
+    <string name="LABEL_TRAIN_COUNT">Treinos realizados:</string>
+    <string name="LABEL_PLAY_COUNT">Jogadas realizadas:</string>
+    <string name="HINT_DECK_NAME">Nome do deck</string>
 </resources>
