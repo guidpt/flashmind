@@ -55,7 +55,7 @@ namespace Flashmind.Api.Authenticate
                 options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"])));
             services.TryAddSingleton<UserRepository>();
 
-            
+
             services.AddMvc();
         }
 
