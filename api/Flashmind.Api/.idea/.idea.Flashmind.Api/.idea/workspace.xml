@@ -146,19 +146,19 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="71" column="94" lean-forward="false" selection-start-line="71" selection-start-column="94" selection-end-line="71" selection-end-column="94" />
+            <state relative-caret-position="281">
+              <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
               <folding>
-                <marker date="1484621084000" expanded="true" signature="6:687" ph="..." />
-                <marker date="1484621084000" expanded="true" signature="725:4461" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="752:4459" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="886:1571" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="1226:1468" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="1797:2238" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="2455:3561" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="2963:3432" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="3678:4077" ph="{...}" />
-                <marker date="1484621084000" expanded="true" signature="4179:4453" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="6:687" ph="..." />
+                <marker date="1484621201000" expanded="true" signature="725:4474" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="752:4472" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="886:1571" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="1226:1468" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="1797:2251" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="2468:3574" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="2976:3445" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="3691:4090" ph="{...}" />
+                <marker date="1484621201000" expanded="true" signature="4192:4466" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -389,12 +389,12 @@
       <workItem from="1484600403254" duration="265000" />
       <workItem from="1484600953788" duration="5944000" />
       <workItem from="1484609429560" duration="48000" />
-      <workItem from="1484609539753" duration="5828000" />
+      <workItem from="1484609539753" duration="5938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27989000" />
+    <option name="totallyTimeSpent" value="28099000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,19 +945,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="71" column="94" lean-forward="false" selection-start-line="71" selection-start-column="94" selection-end-line="71" selection-end-column="94" />
+        <state relative-caret-position="281">
+          <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
           <folding>
-            <marker date="1484621084000" expanded="true" signature="6:687" ph="..." />
-            <marker date="1484621084000" expanded="true" signature="725:4461" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="752:4459" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="886:1571" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="1226:1468" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="1797:2238" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="2455:3561" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="2963:3432" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="3678:4077" ph="{...}" />
-            <marker date="1484621084000" expanded="true" signature="4179:4453" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="6:687" ph="..." />
+            <marker date="1484621201000" expanded="true" signature="725:4474" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="752:4472" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="886:1571" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="1226:1468" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="1797:2251" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="2468:3574" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="2976:3445" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="3691:4090" ph="{...}" />
+            <marker date="1484621201000" expanded="true" signature="4192:4466" ph="{...}" />
           </folding>
         </state>
       </provider>
