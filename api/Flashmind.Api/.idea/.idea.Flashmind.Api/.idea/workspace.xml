@@ -42,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="project.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/project.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-240">
@@ -64,19 +64,6 @@
                 <marker date="1484607971000" expanded="true" signature="1790:1932" ph="[...]" />
                 <marker date="1484607971000" expanded="true" signature="1956:2111" ph="{...}" />
                 <marker date="1484607971000" expanded="true" signature="1981:2105" ph="[...]" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/global.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding>
-                <marker date="1484621794000" expanded="true" signature="0:102" ph="{...}" />
-                <marker date="1484621794000" expanded="true" signature="48:100" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -394,12 +381,12 @@
       <workItem from="1484600403254" duration="265000" />
       <workItem from="1484600953788" duration="5944000" />
       <workItem from="1484609429560" duration="48000" />
-      <workItem from="1484609539753" duration="6303000" />
+      <workItem from="1484609539753" duration="6385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28464000" />
+    <option name="totallyTimeSpent" value="28546000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -935,6 +922,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/global.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/project.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
@@ -956,17 +951,6 @@
             <marker date="1484607971000" expanded="true" signature="1790:1932" ph="[...]" />
             <marker date="1484607971000" expanded="true" signature="1956:2111" ph="{...}" />
             <marker date="1484607971000" expanded="true" signature="1981:2105" ph="[...]" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flashmind.Api.Authenticate/global.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <marker date="1484621794000" expanded="true" signature="0:102" ph="{...}" />
-            <marker date="1484621794000" expanded="true" signature="48:100" ph="{...}" />
           </folding>
         </state>
       </provider>
