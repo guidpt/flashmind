@@ -71,8 +71,6 @@ namespace Flashmind.Api.Authenticate
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
             var jwtAppSettingOptions = Configuration.GetSection(nameof(TokenProviderOptions));
 
-            
-
             app.UseSimpleTokenProvider(new TokenProviderOptions
             {
                 Path = "/api/token",
