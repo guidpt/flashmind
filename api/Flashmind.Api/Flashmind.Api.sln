@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E9F4EAA-59EA-45B8-9AF1-241B6312F456}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{505B2292-FAC6-4162-A4BB-8E4B5E302435}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{C9FB7A3F-9C81-40C5-83FC-E483228DBAE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{9101B59C-38E2-44CE-8066-DBCFFE6013CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{B86D185A-B374-4042-A48C-91D4E9E29EC0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Api.Authenticate", "src\Flashmind.Api.Authenticate\Flashmind.Api.Authenticate.xproj", "{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Api.Application", "src\Flashmind.Api.Application\Flashmind.Api.Application.xproj", "{0AEC85F6-9BAE-4BB9-B147-7487D126FD64}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Api.Token", "src\Flashmind.Api.Token\Flashmind.Api.Token.xproj", "{0858CCE6-867A-437E-98FB-5AEE5F1F085B}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Data", "src\Flashmind.Data\Flashmind.Data.xproj", "{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0858CCE6-867A-437E-98FB-5AEE5F1F085B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0858CCE6-867A-437E-98FB-5AEE5F1F085B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0858CCE6-867A-437E-98FB-5AEE5F1F085B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0858CCE6-867A-437E-98FB-5AEE5F1F085B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9FB7A3F-9C81-40C5-83FC-E483228DBAE2} = {1E9F4EAA-59EA-45B8-9AF1-241B6312F456}
+		{9101B59C-38E2-44CE-8066-DBCFFE6013CC} = {1E9F4EAA-59EA-45B8-9AF1-241B6312F456}
+		{B86D185A-B374-4042-A48C-91D4E9E29EC0} = {1E9F4EAA-59EA-45B8-9AF1-241B6312F456}
+		{9735A6FB-476B-4DCD-AB1A-2AF5B19A6C96} = {B86D185A-B374-4042-A48C-91D4E9E29EC0}
+		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64} = {9101B59C-38E2-44CE-8066-DBCFFE6013CC}
+		{0858CCE6-867A-437E-98FB-5AEE5F1F085B} = {B86D185A-B374-4042-A48C-91D4E9E29EC0}
+		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4} = {C9FB7A3F-9C81-40C5-83FC-E483228DBAE2}
+	EndGlobalSection
+EndGlobal
