@@ -2,6 +2,7 @@ package br.com.nome.flashmind.ui.fragments;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -17,11 +18,14 @@ import java.util.ArrayList;
 
 import br.com.nome.flashmind.R;
 import br.com.nome.flashmind.application.FlashMindApplication;
+import br.com.nome.flashmind.application.FlashMindConstants;
 import br.com.nome.flashmind.logic.model.Deck;
 import br.com.nome.flashmind.logic.presenter.MyDecksPresenter;
 import br.com.nome.flashmind.logic.rxbus.RxQueues;
 import br.com.nome.flashmind.logic.rxbus.events.ListScrolledEvent;
+import br.com.nome.flashmind.ui.activity.CreateDeckActivity;
 import br.com.nome.flashmind.ui.adapter.DeckRecyclerAdapter;
+import br.com.nome.flashmind.utils.GridSpacingItemDecoration;
 import br.com.nome.flashmind.utils.HideShowScrollListener;
 import br.com.nome.flashmind.utils.RecyclerItemClickListener;
 import butterknife.BindView;
@@ -62,8 +66,12 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
     public void setupRecyclerView() {
         rvDecks.setLayoutManager(new GridLayoutManager(getContext(), 2, LinearLayoutManager.VERTICAL, false));
         rvDecks.setHasFixedSize(true);
-        mAdapter = new DeckRecyclerAdapter(getContext());
+        mAdapter = new DeckRecyclerAdapter(getContext(), true);
         rvDecks.setAdapter(mAdapter);
+
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.grid_layout_margin);
+        rvDecks.addItemDecoration(new GridSpacingItemDecoration(2, spacingInPixels, true, 0));
+
         rvDecks.addOnScrollListener(new HideShowScrollListener() {
             @Override
             public void onHide() {
@@ -102,7 +110,9 @@ public class MyDecksFragment extends Fragment implements MyDecksPresenter.IMyDec
 
     @Override
     public void navigateToCreateDeckActivity(String deckName) {
-
+        Intent intent = new Intent(getActivity(), CreateDeckActivity.class);
+        intent.putExtra(FlashMindConstants.INTENT_TAG_DECK_NAME, deckName);
+        startActivity(intent);
     }
 
     @Override

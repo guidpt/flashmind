@@ -12,39 +12,54 @@ import java.util.List;
 
 import br.com.nome.flashmind.R;
 import br.com.nome.flashmind.logic.model.Deck;
-import br.com.nome.flashmind.ui.viewholder.GridDeckViewHolder;
+import br.com.nome.flashmind.ui.viewholder.DeckViewHolder;
 
 /**
  * Created by Alessandro Pryds on 21/12/2016.
  */
-public class DeckRecyclerAdapter extends RecyclerView.Adapter<GridDeckViewHolder> {
+public class DeckRecyclerAdapter extends RecyclerView.Adapter<DeckViewHolder> {
     private final Context context;
+    private final boolean isVertical;
     private List<Deck> items;
 
-    public DeckRecyclerAdapter(Context context) {
+    public DeckRecyclerAdapter(Context context, boolean vertical) {
         this.items = new ArrayList<>();
         this.context = context;
+        this.isVertical = vertical;
     }
 
     @Override
-    public GridDeckViewHolder onCreateViewHolder(ViewGroup parent,
-                                                 int viewType) {
+    public DeckViewHolder onCreateViewHolder(ViewGroup parent,
+                                             int viewType) {
         View v = null;
-        switch (viewType) {
-            case ViewType.DECK_ITEM:
-                v = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.recycler_grid_deck_item, parent, false);
-                break;
-            case ViewType.NEW_ITEM:
-                v = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.recycler_grid_new_deck_item, parent, false);
-                break;
+        if (isVertical) {
+            switch (viewType) {
+                case ViewType.DECK_ITEM:
+                    v = LayoutInflater.from(parent.getContext())
+                            .inflate(R.layout.recycler_grid_deck_item, parent, false);
+                    break;
+                case ViewType.NEW_ITEM:
+                    v = LayoutInflater.from(parent.getContext())
+                            .inflate(R.layout.recycler_grid_new_deck_item, parent, false);
+                    break;
+            }
+        } else {
+            switch (viewType) {
+                case ViewType.DECK_ITEM:
+                    v = LayoutInflater.from(parent.getContext())
+                            .inflate(R.layout.recycler_list_deck_item, parent, false);
+                    break;
+                case ViewType.NEW_ITEM:
+                    v = LayoutInflater.from(parent.getContext())
+                            .inflate(R.layout.recycler_list_new_deck_item, parent, false);
+                    break;
+            }
         }
-        return new GridDeckViewHolder(v);
+        return new DeckViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(GridDeckViewHolder holder, int position) {
+    public void onBindViewHolder(DeckViewHolder holder, int position) {
         Deck item = items.get(position);
     }
 

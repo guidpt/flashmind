@@ -2,12 +2,11 @@
     <string name="app_name">FlashMind</string>
     <string name="loading_message">Carregando...</string>
     <string name="ERROR_MESSAGE_NO_CONNECTION">Sem conexão com a internet.</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">FlashMind</string>
     <string name="LABEL_DECKS">Decks</string>
+    <string name="LABEL_MY_DECKS">Meus Decks</string>
     <string name="LABEL_LAST_DECKS">Decks recentes</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="LABEL_EMPTY_DECK_COUNT">0 Cards</string>
     <string name="BUTTON_PLAY_TEXT">Jogar</string>
     <string name="BUTTON_TRAIN_TEXT">Treinar</string>
@@ -17,4 +16,15 @@
     <string name="LABEL_TRAIN_COUNT">Treinos realizados:</string>
     <string name="LABEL_PLAY_COUNT">Jogadas realizadas:</string>
     <string name="HINT_DECK_NAME">Nome do deck</string>
+    <string name="MENU_DESC_LIST">Lista</string>
+    <string name="LABEL_SUGGESTION">RECOMENDADO</string>
+    <string name="BUTTON_DOWNLOAD_DECK_TEXT">BAIXAR DECK</string>
+    <string name="LABEL_LAST_UPDATED_DECKS">DECKS RECENTEMENTE ATUALIZADOS</string>
+    <string name="BUTTON_DOWNLOAD_TEXT">BAIXAR</string>
+    <string name="LABEL_CATEGORY">Categoria</string>
+    <string name="LABEL_DISCOVER">Explorar</string>
+    <string name="PAGE_TITLE_DISCOVER">Explorar</string>
+    <string name="PAGE_TITLE_HOME">FlashMind</string>
+    <string name="PAGE_TITLE_MY_DECKS">Meus Decks</string>
+    <string name="title_activity_create_deck">CreateDeckActivity</string>
 </resources>

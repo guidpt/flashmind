@@ -27,15 +27,12 @@ import butterknife.ButterKnife;
 public class HomeFragment extends Fragment implements HomePresenter.IHomeView {
 
 
-    @BindView(R.id.rvDecks)
-    protected RecyclerView rvDecks;
     @BindView(R.id.rvLastDecks)
     protected RecyclerView rvLastDecks;
     @BindView(R.id.scrollView)
     protected ScrollView scrollView;
 
     private HomePresenter mPresenter;
-    private DeckRecyclerAdapter mDecksAdapter;
     private DeckRecyclerAdapter mLastDecksAdapter;
 
     public HomeFragment() {
@@ -70,31 +67,12 @@ public class HomeFragment extends Fragment implements HomePresenter.IHomeView {
     }
 
     @Override
-    public void setupDecksRecyclerView() {
-        rvDecks.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        rvDecks.setHasFixedSize(true);
-        mDecksAdapter = new DeckRecyclerAdapter(getContext());
-        rvDecks.setAdapter(mDecksAdapter);
-        rvDecks.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), rvDecks, new RecyclerItemClickListener.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                mPresenter.onDeckTouched(position);
-            }
-
-            @Override
-            public void onItemLongClick(View view, int position) {
-
-            }
-        }));
-    }
-
-    @Override
     public void setupRecentDecksRecyclerView() {
         rvLastDecks.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         rvLastDecks.setHasFixedSize(true);
-        mLastDecksAdapter = new DeckRecyclerAdapter(getContext());
+        mLastDecksAdapter = new DeckRecyclerAdapter(getContext(), false);
         rvLastDecks.setAdapter(mLastDecksAdapter);
-        rvLastDecks.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), rvDecks, new RecyclerItemClickListener.OnItemClickListener() {
+        rvLastDecks.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), rvLastDecks, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 mPresenter.onDeckTouched(position);
@@ -110,11 +88,6 @@ public class HomeFragment extends Fragment implements HomePresenter.IHomeView {
     @Override
     public void showDeckOptionsDialog() {
 
-    }
-
-    @Override
-    public void populateDecks(ArrayList<Deck> decks) {
-        mDecksAdapter.replaceAll(decks);
     }
 
     @Override

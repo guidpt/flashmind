@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/space_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container_download"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark">
+
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/BUTTON_DOWNLOAD_TEXT"
+            android:textColor="@color/textColorDarkBackground"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/container_download"
+        android:background="@color/colorPrimaryDark"
+        android:padding="26dp"
+        android:src="@drawable/ic_plus" />
+
+    <LinearLayout
+        android:id="@+id/container_user"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_toLeftOf="@id/container_download">
+
+        <ImageView
+            android:id="@+id/ivOwnerPhoto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:src="@drawable/ic_user"
+            android:tint="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDeckOwner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/textColorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDeckDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-seif-light"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/textColorPrimaryDark"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/container_user"
+        android:alpha="0.2"
+        android:background="@color/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_user"
+        android:layout_toRightOf="@id/imageView"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:src="@drawable/near_me"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvDeckCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="8sp"
+                android:text="@string/LABEL_EMPTY_DECK_COUNT"
+                android:textColor="@color/textColorPrimaryDark" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvDeckTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/container_count"
+            android:padding="8sp"
+            android:text="@string/LABEL_CATEGORY"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvDeckName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/container_count"
+            android:maxLines="4"
+            android:padding="6dp"
+            android:text="@string/app_name"
+            android:textColor="@color/textColorPrimaryDark"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

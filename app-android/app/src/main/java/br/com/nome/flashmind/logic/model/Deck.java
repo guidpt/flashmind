@@ -17,7 +17,9 @@ public class Deck {
         return title;
     }
 
-    public int getCards() {
+    public int getCardsCount() {
         return cards;
     }
+
+
 }

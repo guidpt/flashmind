@@ -8,8 +8,8 @@ import butterknife.ButterKnife;
 /**
  * Created by Alessandro Pryds on 21/12/2016.
  */
-public class GridDeckViewHolder extends RecyclerView.ViewHolder {
-    public GridDeckViewHolder(View itemView) {
+public class DeckViewHolder extends RecyclerView.ViewHolder {
+    public DeckViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }

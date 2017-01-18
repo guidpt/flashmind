@@ -5,4 +5,5 @@
     <string name="ERROR_MESSAGE_NO_CONNECTION">Sem conexão com a internet.</string>
     <string name="LABEL_DECKS">Decks</string>
     <string name="LABEL_LAST_DECKS">Decks recentes</string>
+    <string name="LABEL_LAST_UPDATED_DECKS">DECKS RECENTEMENTE ATUALIZADOS</string>
 </resources>
