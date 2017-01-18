@@ -32,6 +32,15 @@ namespace Flashmind.Api.Authenticate.Controllers
         {
             try
             {
+                if (_repository.Where(w => w.Username == createUser.Username).Any())
+                {
+                    return BadRequest(new ApiErrorProxy
+                    {
+                        Code = 0,
+                        Message = "User already registred with this username."
+                    });
+                }
+
                 var item = Map<CreateUser, UserEntity>(createUser);
                 item.Id = Guid.NewGuid();
 
