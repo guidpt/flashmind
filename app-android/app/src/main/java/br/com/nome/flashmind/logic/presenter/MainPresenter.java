@@ -11,6 +11,12 @@ import rx.Subscription;
  * Created by Alessandro Pryds on 20/12/2016.
  */
 public class MainPresenter {
+    private static final int HOME_MENU_INDEX = 2;
+
+    private static final int MY_DECKS_INDEX = 0;
+    private static final int HOME_INDEX = 1;
+    private static final int DISCOVER_INDEX = 2;
+
     private IMainView mView;
     private Subscription mScrollSubscription;
 
@@ -24,6 +30,12 @@ public class MainPresenter {
         mView.setupViewPager();
         mView.setupBottomNavigation();
         createSubscriptions();
+    }
+
+    public void onDestroy(){
+        if(mScrollSubscription != null && !mScrollSubscription.isUnsubscribed()){
+            mScrollSubscription.unsubscribe();
+        }
     }
 
     private void createSubscriptions() {
@@ -49,6 +61,33 @@ public class MainPresenter {
         });
     }
 
+    public void onMenuListTouched() {
+        
+    }
+
+    public void onCenterButtonTouched() {
+        mView.invalidateOptionsMenu(HOME_MENU_INDEX);
+        mView.moveToPage(HOME_INDEX);
+    }
+
+    public void onPageSwipe(int position) {
+        mView.invalidateOptionsMenu(position);
+        mView.setTitleForPage(position);
+    }
+
+    public void onPageSelected(int position) {
+        mView.invalidateOptionsMenu(position);
+        mView.setTitleForPage(position);
+        switch (position){
+            case 0:
+                mView.moveToPage(MY_DECKS_INDEX);
+                break;
+            case 1:
+                mView.moveToPage(DISCOVER_INDEX);
+                break;
+        }
+    }
+
     public interface IMainView extends IBaseView {
 
         void setPresenter(MainPresenter presenter);
@@ -62,5 +101,11 @@ public class MainPresenter {
         void hideBottomNavigation();
 
         void showBottomNavigation();
+
+        void invalidateOptionsMenu(int position);
+
+        void moveToPage(int page);
+
+        void setTitleForPage(int position);
     }
 }

@@ -18,10 +18,8 @@ public class HomePresenter {
     }
 
     public void start() {
-        mView.setupDecksRecyclerView();
         mView.setupRecentDecksRecyclerView();
         mDecks = createSampleDecks();
-        mView.populateDecks(mDecks);
         mView.populateLastDecks(mDecks);
 
         mView.setupScrollViewListener();
@@ -44,13 +42,9 @@ public class HomePresenter {
 
         void setPresenter(HomePresenter homePresenter);
 
-        void setupDecksRecyclerView();
-
         void setupRecentDecksRecyclerView();
 
         void showDeckOptionsDialog();
-
-        void populateDecks(ArrayList<Deck> mDecks);
 
         void populateLastDecks(ArrayList<Deck> mDecks);
 

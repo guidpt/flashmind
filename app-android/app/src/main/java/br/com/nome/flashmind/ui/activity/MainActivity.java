@@ -1,12 +1,17 @@
 package br.com.nome.flashmind.ui.activity;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.view.animation.Interpolator;
 
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
@@ -23,16 +28,14 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements MainPresenter.IMainView {
 
-    private static final int DURATION = 1500;
-    private static final Interpolator INTERPOLATOR = new DecelerateInterpolator(5);
-
-
     @BindView(R.id.bottomNavigation)
     protected SpaceNavigationView bottomNavigation;
     @BindView(R.id.vpMain)
     protected ViewPager vpMain;
 
     private MainPresenter mPresenter;
+    private int mSelectedIndex;
+    private int[] titles = {R.string.PAGE_TITLE_MY_DECKS, R.string.PAGE_TITLE_HOME, R.string.PAGE_TITLE_DISCOVER};
 
     //region Android Lifecycle
     @Override
@@ -50,6 +53,49 @@ public class MainActivity extends BaseActivity implements MainPresenter.IMainVie
         super.onSaveInstanceState(outState);
         bottomNavigation.onSaveInstanceState(outState);
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        switch (mSelectedIndex){
+            case 0:
+                inflater.inflate(R.menu.deck_menu, menu);
+                break;
+            case 1:
+                inflater.inflate(R.menu.main_menu, menu);
+                break;
+            case 2:
+                inflater.inflate(R.menu.search_menu, menu);
+                SearchManager searchManager =
+                        (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+                SearchView searchView =
+                        (SearchView) menu.findItem(R.id.menu_search).getActionView();
+                searchView.setSearchableInfo(
+                        searchManager.getSearchableInfo(getComponentName()));
+
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId())
+        {
+            case R.id.list:
+                mPresenter.onMenuListTouched();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        mPresenter.onDestroy();
+        super.onDestroy();
+    }
+
     //endregion
 
     //region IMainView
@@ -69,33 +115,43 @@ public class MainActivity extends BaseActivity implements MainPresenter.IMainVie
     public void setupViewPager() {
         FlashMindViewPagerAdapter vpAdapter = new FlashMindViewPagerAdapter(getSupportFragmentManager());
         vpMain.setAdapter(vpAdapter);
+        vpMain.setOffscreenPageLimit(3);
+        vpMain.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mPresenter.onPageSwipe(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
     public void setupBottomNavigation() {
-        bottomNavigation.addSpaceItem(new SpaceItem("HOME", R.drawable.near_me));
-        bottomNavigation.addSpaceItem(new SpaceItem("SEARCH", R.drawable.near_me));
+        bottomNavigation.addSpaceItem(new SpaceItem(getString(R.string.LABEL_MY_DECKS), R.drawable.near_me));
+        bottomNavigation.addSpaceItem(new SpaceItem(getString(R.string.LABEL_DISCOVER), R.drawable.near_me));
         bottomNavigation.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
             public void onCentreButtonClick() {
-                vpMain.setCurrentItem(1);
+                mPresenter.onCenterButtonTouched();
             }
 
             @Override
             public void onItemClick(int itemIndex, String itemName) {
-                switch (itemIndex){
-                    case 0:
-                        vpMain.setCurrentItem(0);
-                        break;
-                    case 1:
-                        vpMain.setCurrentItem(2);
-                        break;
-                }
+                mPresenter.onPageSelected(itemIndex);
             }
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
-
+                mPresenter.onPageSelected(itemIndex);
             }
         });
     }
@@ -120,7 +176,22 @@ public class MainActivity extends BaseActivity implements MainPresenter.IMainVie
         TransitionManager.beginDelayedTransition(bottomNavigation, slide);
         bottomNavigation.setVisibility(View.VISIBLE);
 
+    }
 
+    @Override
+    public void invalidateOptionsMenu(int position) {
+        mSelectedIndex = position;
+        invalidateOptionsMenu();
+    }
+
+    @Override
+    public void moveToPage(int page) {
+        vpMain.setCurrentItem(page);
+    }
+
+    @Override
+    public void setTitleForPage(int position) {
+        getSupportActionBar().setTitle(getString(titles[position]));
     }
     //endregion
 }
