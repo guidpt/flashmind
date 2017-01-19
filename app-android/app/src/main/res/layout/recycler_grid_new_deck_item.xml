@@ -11,6 +11,6 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/ic_plus" />
+            android:src="@drawable/ic_add_circle_white_24dp" />
 
 </LinearLayout>

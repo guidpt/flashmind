@@ -11,37 +11,22 @@
 
     <LinearLayout
         android:id="@+id/container_download"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimaryDark">
+        android:gravity="right">
 
 
-        <Button
-            android:id="@+id/btnDownload"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+        <ImageButton
+            android:id="@+id/btnReport"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/BUTTON_DOWNLOAD_TEXT"
-            android:textColor="@color/textColorDarkBackground"
-            android:textSize="14sp" />
+            android:padding="16dp"
+            android:src="@drawable/ic_menu_three_dots"
+            android:tint="@android:color/darker_gray" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/container_download"
-        android:background="@color/colorPrimaryDark"
-        android:padding="26dp"
-        android:src="@drawable/ic_plus" />
 
     <LinearLayout
         android:id="@+id/container_user"
@@ -74,17 +59,28 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvDeckDate"
+                android:id="@+id/tvDeckTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-seif-light"
                 android:gravity="center_vertical"
-                android:text="@string/app_name"
-                android:textColor="@color/textColorPrimaryDark"
+                android:text="@string/LABEL_CATEGORY"
+                android:textColor="@color/colorPrimary"
                 android:textSize="10sp" />
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/container_user"
+        android:background="@color/colorPrimaryDark"
+        android:padding="26dp"
+        android:src="@drawable/ic_get_app_white_24dp" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -129,16 +125,6 @@
 
 
         <TextView
-            android:id="@+id/tvDeckTag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@id/container_count"
-            android:padding="8sp"
-            android:text="@string/LABEL_CATEGORY"
-            android:textColor="@color/colorPrimary" />
-
-        <TextView
             android:id="@+id/tvDeckName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -148,6 +134,7 @@
             android:text="@string/app_name"
             android:textColor="@color/textColorPrimaryDark"
             android:textSize="16sp" />
+
     </RelativeLayout>
 
 

@@ -1,12 +1,21 @@
 package br.com.nome.flashmind.ui.activity;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.rd.PageIndicatorView;
+import com.thebluealliance.spectrum.SpectrumDialog;
 import com.transitionseverywhere.Rotate;
 import com.transitionseverywhere.Transition;
 import com.transitionseverywhere.TransitionManager;
@@ -34,7 +43,16 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
     protected ImageButton btnFlip;
     @BindView(R.id.root)
     protected CoordinatorLayout root;
+    @BindView(R.id.btnColor)
+    protected ImageButton btnColor;
+    @BindView(R.id.ivColorSelected)
+    protected ImageView ivColorSelected;
+    @BindView(R.id.toolbar)
+    protected Toolbar toolbar;
+    @BindView(R.id.appBarLayout)
+    protected AppBarLayout appBarLayout;
     private CreateDeckPresenter mPresenter;
+    private boolean isImageSelect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +68,47 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         super.onBackPressed();
     }
 
-    //region Button ACtions
-    @OnClick(R.id.btnFlip)
-    public void onBtnFlipTouched() {
-        mPresenter.onBtnFlipTouched();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        if (isImageSelect) {
+            inflater.inflate(R.menu.create_deck_image_menu, menu);
+            return true;
+        }
+        inflater.inflate(R.menu.create_deck_menu, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            case R.id.aspect:
+                mPresenter.onMenuAspectTouched();
+                break;
+            case R.id.image:
+                mPresenter.onMenuImageTouched();
+                break;
+        }
+        return true;
+    }
+
+
+    //region Button Actions
+    @OnClick({R.id.btnColor, R.id.ivColorSelected, R.id.btnFlip})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnColor:
+            case R.id.ivColorSelected:
+                mPresenter.onBtnColorTouched();
+                break;
+            case R.id.btnFlip:
+                mPresenter.onBtnFlipTouched();
+                break;
+        }
     }
     //endregion
 
@@ -76,7 +131,7 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
 
     @Override
     public void setupDeckViewPager(ArrayList<Card> mCards) {
-        EditCardViewPagerAdapter vpAdapter = new EditCardViewPagerAdapter(getSupportFragmentManager(),mCards);
+        EditCardViewPagerAdapter vpAdapter = new EditCardViewPagerAdapter(getSupportFragmentManager(), mCards);
         vpCards.setAdapter(vpAdapter);
         vpCards.setOffscreenPageLimit(3);
         vpCards.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -106,6 +161,34 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         rotate.addListener(new DisableWhenAnimatingListener(btnFlip));
         TransitionManager.beginDelayedTransition(root, rotate);
         btnFlip.setRotation(rotation);
+    }
+
+    @Override
+    public void navigateToLoadImage() {
+
+    }
+
+    @Override
+    public void showColorPickerDialog() {
+        new SpectrumDialog.Builder(this)
+                .setColors(R.array.card_colors)
+                .setDismissOnColorSelected(true)
+                .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
+                    @Override
+                    public void onColorSelected(boolean positiveResult, @ColorInt int color) {
+                        if (positiveResult) {
+                            mPresenter.onColorSelected(color);
+                        }
+                    }
+                }).build().show(getSupportFragmentManager(), "colorDialog");
+    }
+
+    @Override
+    public void tintDeck(int color) {
+        ivColorSelected.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+        btnColor.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+        toolbar.setBackgroundColor(color);
+        appBarLayout.setBackgroundColor(color);
     }
     //endregion
 }

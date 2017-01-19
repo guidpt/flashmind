@@ -27,4 +27,11 @@
     <string name="PAGE_TITLE_HOME">FlashMind</string>
     <string name="PAGE_TITLE_MY_DECKS">Meus Decks</string>
     <string name="title_activity_create_deck">CreateDeckActivity</string>
+    <string name="LABEL_DECK_NAME">Nome do deck</string>
+    <string name="LABEL_FRONT">Frente</string>
+    <string name="LABEL_BACK">Atrás</string>
+    <string name="MENU_CHANGE_IMAGE">Alterar imagem</string>
+    <string name="MENU_IMAGE_ASPECT">Resolução</string>
+    <string name="MENU_IMAGE">Carregar imagem</string>
+    <string name="DIALOG_TITLE_COLOR_PICKER">Selecione uma cor</string>
 </resources>

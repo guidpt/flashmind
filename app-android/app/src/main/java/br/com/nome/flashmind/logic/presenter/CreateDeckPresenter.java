@@ -3,6 +3,7 @@ package br.com.nome.flashmind.logic.presenter;
 import java.util.ArrayList;
 
 import br.com.nome.flashmind.logic.model.Card;
+import br.com.nome.flashmind.ui.view.IBaseView;
 
 /**
  * Created by Alessandro Pryds on 17/01/2017.
@@ -42,7 +43,23 @@ public class CreateDeckPresenter {
         mCurrentPosition = position;
     }
 
-    public interface ICreateDeckView {
+    public void onMenuImageTouched() {
+        mView.navigateToLoadImage();
+    }
+
+    public void onMenuAspectTouched() {
+
+    }
+
+    public void onBtnColorTouched() {
+        mView.showColorPickerDialog();
+    }
+
+    public void onColorSelected(int color) {
+        mView.tintDeck(color);
+    }
+
+    public interface ICreateDeckView extends IBaseView{
         void setPresenter(CreateDeckPresenter presenter);
 
         void initToolbar();
@@ -50,5 +67,11 @@ public class CreateDeckPresenter {
         void setupDeckViewPager(ArrayList<Card> mDecks);
 
         void flipView(int mCurrentPosition, int mCurrenRotation);
+
+        void navigateToLoadImage();
+
+        void showColorPickerDialog();
+
+        void tintDeck(int color);
     }
 }

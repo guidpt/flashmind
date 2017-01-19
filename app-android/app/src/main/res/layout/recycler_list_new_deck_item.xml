@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:padding="16dp"
-            android:src="@drawable/ic_plus" />
+            android:src="@drawable/ic_add_circle_white_24dp" />
     </LinearLayout>
 
 </LinearLayout>
