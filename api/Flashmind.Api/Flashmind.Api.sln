@@ -24,6 +24,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Api.Token", "src\
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Data", "src\Flashmind.Data\Flashmind.Data.xproj", "{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flashmind.Api.Deck", "src\Flashmind.Api.Deck\Flashmind.Api.Deck.xproj", "{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +64,6 @@ Global
 		{0AEC85F6-9BAE-4BB9-B147-7487D126FD64} = {9101B59C-38E2-44CE-8066-DBCFFE6013CC}
 		{0858CCE6-867A-437E-98FB-5AEE5F1F085B} = {B86D185A-B374-4042-A48C-91D4E9E29EC0}
 		{6C659A58-9FE1-4478-9FF2-C9D96BCD20D4} = {C9FB7A3F-9C81-40C5-83FC-E483228DBAE2}
+		{FDAB2414-0C1C-42A4-9CFC-59ACB07CD155} = {B86D185A-B374-4042-A48C-91D4E9E29EC0}
 	EndGlobalSection
 EndGlobal
