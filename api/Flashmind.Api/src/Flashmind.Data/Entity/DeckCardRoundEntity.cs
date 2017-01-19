@@ -9,15 +9,15 @@ namespace Flashmind.Data.Entity
 
         public bool IsCorrect { get; set; }
 
-        public Guid CardForeignKey { get; set; }
+        public Guid CardId { get; set; }
 
-        [ForeignKey("CardForeignKey")]
+        [ForeignKey("CardId")]
         public CardEntity Card { get; set; }
 
 
-        public Guid DeckRoundForeignKey { get; set; }
+        public Guid DeckRoundId { get; set; }
 
-        [ForeignKey("DeckRoundForeignKey")]
+        [ForeignKey("DeckRoundId")]
         public DeckRoundEntity Round { get; set; }
 
 //        public const string TableName = "DeckCardRounds";

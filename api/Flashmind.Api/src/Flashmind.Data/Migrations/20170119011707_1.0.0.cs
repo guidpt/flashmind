@@ -15,6 +15,9 @@ namespace Flashmind.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     ExternalId = table.Column<string>(nullable: true),
                     IsRegistred = table.Column<bool>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
+                    Token = table.Column<string>(nullable: true),
                     Username = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -27,17 +30,24 @@ namespace Flashmind.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    BestScore = table.Column<double>(nullable: false),
                     Color = table.Column<string>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    DownloadCount = table.Column<int>(nullable: false),
+                    LastUpdateDate = table.Column<DateTime>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    PlayedRounds = table.Column<int>(nullable: false),
                     Privacy = table.Column<int>(nullable: false),
                     Tags = table.Column<string>(nullable: true),
-                    UserForeignKey = table.Column<Guid>(nullable: false)
+                    TotalCards = table.Column<int>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Decks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Decks_Users_UserForeignKey",
-                        column: x => x.UserForeignKey,
+                        name: "FK_Decks_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -50,7 +60,7 @@ namespace Flashmind.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     AnswerImageUrl = table.Column<string>(nullable: true),
                     AnswerString = table.Column<string>(nullable: true),
-                    DeckForeignKey = table.Column<Guid>(nullable: false),
+                    DeckId = table.Column<Guid>(nullable: false),
                     QuestionImageUrl = table.Column<string>(nullable: true),
                     QuestionString = table.Column<string>(nullable: true)
                 },
@@ -58,8 +68,8 @@ namespace Flashmind.Data.Migrations
                 {
                     table.PrimaryKey("PK_Cards", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cards_Decks_DeckForeignKey",
-                        column: x => x.DeckForeignKey,
+                        name: "FK_Cards_Decks_DeckId",
+                        column: x => x.DeckId,
                         principalTable: "Decks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -70,15 +80,15 @@ namespace Flashmind.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DeckForeignKey = table.Column<Guid>(nullable: false),
+                    DeckId = table.Column<Guid>(nullable: false),
                     Score = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DeckRounds", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DeckRounds_Decks_DeckForeignKey",
-                        column: x => x.DeckForeignKey,
+                        name: "FK_DeckRounds_Decks_DeckId",
+                        column: x => x.DeckId,
                         principalTable: "Decks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -89,24 +99,24 @@ namespace Flashmind.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DeckForeignKey = table.Column<Guid>(nullable: false),
-                    UserForeignKey = table.Column<Guid>(nullable: false)
+                    DeckId = table.Column<Guid>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_JoinedDecks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_JoinedDecks_Decks_DeckForeignKey",
-                        column: x => x.DeckForeignKey,
+                        name: "FK_JoinedDecks_Decks_DeckId",
+                        column: x => x.DeckId,
                         principalTable: "Decks",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_JoinedDecks_Users_UserForeignKey",
-                        column: x => x.UserForeignKey,
+                        name: "FK_JoinedDecks_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -114,61 +124,61 @@ namespace Flashmind.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    CardForeignKey = table.Column<Guid>(nullable: false),
-                    DeckRoundForeignKey = table.Column<Guid>(nullable: false),
+                    CardId = table.Column<Guid>(nullable: false),
+                    DeckRoundId = table.Column<Guid>(nullable: false),
                     IsCorrect = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DeckCardRounds", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DeckCardRounds_Cards_CardForeignKey",
-                        column: x => x.CardForeignKey,
+                        name: "FK_DeckCardRounds_Cards_CardId",
+                        column: x => x.CardId,
                         principalTable: "Cards",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DeckCardRounds_DeckRounds_DeckRoundForeignKey",
-                        column: x => x.DeckRoundForeignKey,
+                        name: "FK_DeckCardRounds_DeckRounds_DeckRoundId",
+                        column: x => x.DeckRoundId,
                         principalTable: "DeckRounds",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cards_DeckForeignKey",
+                name: "IX_Cards_DeckId",
                 table: "Cards",
-                column: "DeckForeignKey");
+                column: "DeckId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DeckCardRounds_CardForeignKey",
+                name: "IX_DeckCardRounds_CardId",
                 table: "DeckCardRounds",
-                column: "CardForeignKey");
+                column: "CardId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DeckCardRounds_DeckRoundForeignKey",
+                name: "IX_DeckCardRounds_DeckRoundId",
                 table: "DeckCardRounds",
-                column: "DeckRoundForeignKey");
+                column: "DeckRoundId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Decks_UserForeignKey",
+                name: "IX_Decks_UserId",
                 table: "Decks",
-                column: "UserForeignKey");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DeckRounds_DeckForeignKey",
+                name: "IX_DeckRounds_DeckId",
                 table: "DeckRounds",
-                column: "DeckForeignKey");
+                column: "DeckId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_JoinedDecks_DeckForeignKey",
+                name: "IX_JoinedDecks_DeckId",
                 table: "JoinedDecks",
-                column: "DeckForeignKey");
+                column: "DeckId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_JoinedDecks_UserForeignKey",
+                name: "IX_JoinedDecks_UserId",
                 table: "JoinedDecks",
-                column: "UserForeignKey");
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

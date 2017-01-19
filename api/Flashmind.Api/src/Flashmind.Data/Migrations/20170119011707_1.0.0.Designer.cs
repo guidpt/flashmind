@@ -9,8 +9,8 @@ using Flashmind.Data.Entity;
 namespace Flashmind.Data.Migrations
 {
     [DbContext(typeof(FlashmindContext))]
-    [Migration("20170116214737_1.0.1")]
-    partial class _101
+    [Migration("20170119011707_1.0.0")]
+    partial class _100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace Flashmind.Data.Migrations
 
                     b.Property<string>("AnswerString");
 
-                    b.Property<Guid>("DeckForeignKey");
+                    b.Property<Guid>("DeckId");
 
                     b.Property<string>("QuestionImageUrl");
 
@@ -35,7 +35,7 @@ namespace Flashmind.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DeckForeignKey");
+                    b.HasIndex("DeckId");
 
                     b.ToTable("Cards");
                 });
@@ -45,17 +45,17 @@ namespace Flashmind.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("CardForeignKey");
+                    b.Property<Guid>("CardId");
 
-                    b.Property<Guid>("DeckRoundForeignKey");
+                    b.Property<Guid>("DeckRoundId");
 
                     b.Property<bool>("IsCorrect");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CardForeignKey");
+                    b.HasIndex("CardId");
 
-                    b.HasIndex("DeckRoundForeignKey");
+                    b.HasIndex("DeckRoundId");
 
                     b.ToTable("DeckCardRounds");
                 });
@@ -65,17 +65,31 @@ namespace Flashmind.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("BestScore");
+
                     b.Property<string>("Color");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<int>("DownloadCount");
+
+                    b.Property<DateTime>("LastUpdateDate");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("PlayedRounds");
 
                     b.Property<int>("Privacy");
 
                     b.Property<string>("Tags");
 
-                    b.Property<Guid>("UserForeignKey");
+                    b.Property<int>("TotalCards");
+
+                    b.Property<Guid>("UserId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserForeignKey");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Decks");
                 });
@@ -85,13 +99,13 @@ namespace Flashmind.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("DeckForeignKey");
+                    b.Property<Guid>("DeckId");
 
                     b.Property<double>("Score");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DeckForeignKey");
+                    b.HasIndex("DeckId");
 
                     b.ToTable("DeckRounds");
                 });
@@ -101,15 +115,15 @@ namespace Flashmind.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("DeckForeignKey");
+                    b.Property<Guid>("DeckId");
 
-                    b.Property<Guid>("UserForeignKey");
+                    b.Property<Guid>("UserId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DeckForeignKey");
+                    b.HasIndex("DeckId");
 
-                    b.HasIndex("UserForeignKey");
+                    b.HasIndex("UserId");
 
                     b.ToTable("JoinedDecks");
                 });
@@ -122,6 +136,10 @@ namespace Flashmind.Data.Migrations
                     b.Property<string>("ExternalId");
 
                     b.Property<bool>("IsRegistred");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Password");
 
                     b.Property<string>("Token");
 
@@ -136,7 +154,7 @@ namespace Flashmind.Data.Migrations
                 {
                     b.HasOne("Flashmind.Data.Entity.DeckEntity", "Deck")
                         .WithMany("Cards")
-                        .HasForeignKey("DeckForeignKey")
+                        .HasForeignKey("DeckId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -144,12 +162,12 @@ namespace Flashmind.Data.Migrations
                 {
                     b.HasOne("Flashmind.Data.Entity.CardEntity", "Card")
                         .WithMany()
-                        .HasForeignKey("CardForeignKey")
+                        .HasForeignKey("CardId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Flashmind.Data.Entity.DeckRoundEntity", "Round")
                         .WithMany("DeckCardRounds")
-                        .HasForeignKey("DeckRoundForeignKey")
+                        .HasForeignKey("DeckRoundId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -157,7 +175,7 @@ namespace Flashmind.Data.Migrations
                 {
                     b.HasOne("Flashmind.Data.Entity.UserEntity", "User")
                         .WithMany("Decks")
-                        .HasForeignKey("UserForeignKey")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -165,7 +183,7 @@ namespace Flashmind.Data.Migrations
                 {
                     b.HasOne("Flashmind.Data.Entity.DeckEntity", "Deck")
                         .WithMany()
-                        .HasForeignKey("DeckForeignKey")
+                        .HasForeignKey("DeckId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -173,12 +191,12 @@ namespace Flashmind.Data.Migrations
                 {
                     b.HasOne("Flashmind.Data.Entity.DeckEntity", "Deck")
                         .WithMany()
-                        .HasForeignKey("DeckForeignKey")
+                        .HasForeignKey("DeckId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Flashmind.Data.Entity.UserEntity", "User")
                         .WithMany("JoinedDecks")
-                        .HasForeignKey("UserForeignKey")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
         }

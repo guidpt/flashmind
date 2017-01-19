@@ -17,11 +17,11 @@ namespace Flashmind.Data.Entity
         public string AnswerImageUrl { get; set; }
 
 
-        public Guid DeckForeignKey { get; set; }
+        public Guid DeckId { get; set; }
 
         //Virtual
 
-        [ForeignKey("DeckForeignKey")]
+        [ForeignKey("DeckId")]
         public DeckEntity Deck { get; set; }
 
 

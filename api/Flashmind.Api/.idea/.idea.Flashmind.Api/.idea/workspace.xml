@@ -15,24 +15,45 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs">
+      <file leaf-file-name="DeckEntity.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="30" column="79" lean-forward="false" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1484698824000" expanded="true" signature="6:455" ph="..." />
-                <marker date="1484698824000" expanded="true" signature="505:2223" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="584:2221" ph="{...}" />
-                <marker date="1484698824000" expanded="false" signature="693:751" ph="{...}" />
-                <marker date="1484698824000" expanded="false" signature="876:1953" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="902:1723" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="1001:1252" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="1096:1232" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="1505:1587" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="1755:1943" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="1838:1927" ph="{...}" />
-                <marker date="1484698824000" expanded="true" signature="2010:2214" ph="{...}" />
+                <marker date="1484790728000" expanded="true" signature="6:136" ph="..." />
+                <marker date="1484790728000" expanded="true" signature="169:1087" ph="{...}" />
+                <marker date="1484790728000" expanded="true" signature="212:1012" ph="{...}" />
+                <marker date="1484790728000" expanded="true" signature="1041:1085" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckProxy.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/DeckProxy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <marker date="1484789869000" expanded="true" signature="6:76" ph="..." />
+                <marker date="1484789869000" expanded="true" signature="119:777" ph="{...}" />
+                <marker date="1484789869000" expanded="true" signature="148:775" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoinedDeckEntity.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <marker date="1484786451000" expanded="true" signature="6:147" ph="..." />
+                <marker date="1484786451000" expanded="true" signature="180:1215" ph="{...}" />
+                <marker date="1484786451000" expanded="true" signature="229:1213" ph="{...}" />
+                <marker date="1484786451000" expanded="true" signature="551:1207" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
               </folding>
             </state>
           </provider>
@@ -41,8 +62,8 @@
       <file leaf-file-name="UserEntity.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/UserEntity.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <marker date="1484698539000" expanded="true" signature="6:70" ph="..." />
                 <marker date="1484698539000" expanded="true" signature="103:551" ph="{...}" />
@@ -52,76 +73,153 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeckEntity.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs">
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="47" />
               <folding>
-                <marker date="1484779997000" expanded="true" signature="6:136" ph="..." />
-                <marker date="1484779997000" expanded="true" signature="169:874" ph="{...}" />
-                <marker date="1484779997000" expanded="true" signature="212:799" ph="{...}" />
-                <marker date="1484779997000" expanded="true" signature="828:872" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="6:361" ph="..." />
+                <marker date="1484787555000" expanded="true" signature="387:2101" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="414:2099" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="468:1153" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="808:1050" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="1379:1596" ph="{...}" />
+                <marker date="1484787555000" expanded="true" signature="1813:2093" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeckRoundEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckRoundEntity.cs">
+      <file leaf-file-name="20170119011707_1.0.0.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Migrations/20170119011707_1.0.0.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-331">
+              <caret line="144" column="60" lean-forward="false" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
               <folding>
-                <marker date="1484698539000" expanded="true" signature="6:136" ph="..." />
-                <marker date="1484698539000" expanded="true" signature="169:935" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="217:933" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="474:927" ph="/* public const string TableName = &quot;DeckRounds&quot;; ... */" />
+                <marker date="1484788975000" expanded="true" signature="6:95" ph="..." />
+                <marker date="1484788975000" expanded="true" signature="132:8243" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="176:8241" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="252:7685" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="390:881" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="920:1017" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="1148:1992" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="2031:2426" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="2557:3003" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="3042:3437" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="3573:3786" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="3825:4230" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="4367:4579" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="4618:5330" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="5470:5756" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="5795:6536" ph="{...}" />
+                <marker date="1484788975000" expanded="true" signature="7758:8235" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeckCardRoundEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckCardRoundEntity.cs">
+      <file leaf-file-name="DeckController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/Controllers/DeckController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="30">
+              <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
               <folding>
-                <marker date="1484698539000" expanded="true" signature="6:102" ph="..." />
-                <marker date="1484698539000" expanded="true" signature="135:1217" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="187:1215" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="527:1208" ph="/* public const string TableName = &quot;DeckCardRounds&quot;; ... */" />
+                <marker date="1484790846000" expanded="true" signature="6:420" ph="..." />
+                <marker date="1484790846000" expanded="true" signature="462:6352" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="541:6350" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="735:837" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="942:2338" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="968:2104" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="1172:1322" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="1384:1498" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="1828:2048" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2136:2328" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2221:2312" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2481:3888" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2507:3654" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2711:2861" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="2923:3037" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="3378:3598" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="3686:3878" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="3771:3862" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="4031:5505" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="4057:5271" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="4261:4411" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="4473:4587" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="4995:5215" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="5303:5495" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="5388:5479" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="5564:5768" ph="{...}" />
+                <marker date="1484790846000" expanded="true" signature="6079:6344" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JoinedDeckEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+      <file leaf-file-name="EFRepository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Repository/EFRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
               <folding>
-                <marker date="1484698539000" expanded="true" signature="6:147" ph="..." />
-                <marker date="1484698539000" expanded="true" signature="180:1247" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="229:1245" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="583:1239" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
+                <marker date="1484698539000" expanded="true" signature="6:164" ph="..." />
+                <marker date="1484698539000" expanded="true" signature="212:4043" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="284:4041" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="384:444" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="487:554" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="620:729" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="784:923" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="998:1119" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1165:1254" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1323:1435" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1481:1551" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1620:1732" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1784:1862" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="1958:2049" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2144:2234" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2292:2361" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2454:2536" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2589:2662" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2750:2831" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="2912:2991" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3038:3100" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3148:3299" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3226:3289" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3354:3542" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3432:3495" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3552:4035" ph="IDisposable" />
+                <marker date="1484698539000" expanded="true" signature="3667:3898" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3709:3853" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3754:3839" ph="{...}" />
+                <marker date="1484698539000" expanded="true" signature="3929:4015" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/CardEntity.cs">
+      <file leaf-file-name="PaginedPayload.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Payload/PaginedPayload.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="44" />
               <folding>
-                <marker date="1484698539000" expanded="true" signature="6:136" ph="..." />
-                <marker date="1484698539000" expanded="true" signature="169:1032" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="212:1030" ph="{...}" />
-                <marker date="1484698539000" expanded="true" signature="584:1021" ph="/* public const string TableName = &quot;Cards&quot;; ... */" />
+                <marker date="1484790565000" expanded="true" signature="43:219" ph="{...}" />
+                <marker date="1484790565000" expanded="true" signature="77:217" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IUser.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Api/IUser.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <marker date="1484784821000" expanded="true" signature="6:118" ph="..." />
+                <marker date="1484784821000" expanded="true" signature="159:452" ph="{...}" />
+                <marker date="1484784821000" expanded="true" signature="188:450" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -129,18 +227,43 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Configuration</find>
+      <find>FK_DeckCardRounds_DeckRounds_DeckRoundId</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Authenticate/project.json" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Deck/project.json" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Authenticate/appsettings.json" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/project.json" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/TokenProxy.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Deck/Repository/DeckRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/Api/ILogin.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Deck/appsettings.json" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/Api/IUser.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Deck/Startup.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Entity/CardEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckCardRoundEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckRoundEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Startup.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Data/Migrations/20170119011707_1.0.0.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/DeckProxy.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Application/Payload/PaginedPayload.cs" />
         <option value="$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Flashmind.Api.Deck/Controllers/DeckController.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -165,7 +288,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api (4 projects)" />
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -183,7 +306,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api (4 projects)" />
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -195,7 +318,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api.Authenticate" />
+              <option name="myItemId" value="Flashmind.Api.Deck" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,7 +328,33 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api (4 projects)" />
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Api.Deck" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -227,7 +376,59 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api (4 projects)" />
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Data" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Migrations" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Data" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -241,7 +442,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Flashmind.Api (4 projects)" />
+              <option name="myItemId" value="Flashmind.Api (5 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,12 +492,14 @@
       <option name="presentableId" value="Default" />
       <updated>1484698597135</updated>
       <workItem from="1484698599536" duration="704000" />
-      <workItem from="1484778837593" duration="1187000" />
+      <workItem from="1484778837593" duration="1830000" />
+      <workItem from="1484780890025" duration="1186000" />
+      <workItem from="1484783160901" duration="7271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1891000" />
+    <option name="totallyTimeSpent" value="10991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,11 +511,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31098545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -344,13 +547,172 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
             <marker date="1484698824000" expanded="true" signature="6:455" ph="..." />
             <marker date="1484698824000" expanded="true" signature="505:2223" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="584:2221" ph="{...}" />
-            <marker date="1484698824000" expanded="false" signature="693:751" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="693:751" ph="{...}" />
+            <marker date="1484698824000" expanded="false" signature="876:1953" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="902:1723" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1001:1252" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1096:1232" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1505:1587" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1755:1943" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1838:1927" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="2010:2214" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <marker date="1484790728000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484790728000" expanded="true" signature="169:1087" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="212:1012" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="1041:1085" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="0:2113" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="22:1020" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="57:131" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1036:1359" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1169:1353" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1241:1343" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1380:1530" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1407:1524" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1432:1514" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1553:1635" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1660:1744" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1690:1738" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1769:1938" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1790:1932" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1956:2111" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1981:2105" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <marker date="1484784639000" expanded="true" signature="0:736" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="175:305" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="333:428" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="453:734" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484784880000" expanded="true" signature="6:758" ph="..." />
+            <marker date="1484784880000" expanded="true" signature="788:3358" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="815:3356" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="949:1336" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="1629:2315" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="1744:1935" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2350:2803" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2523:2740" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2914:3350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="6:687" ph="..." />
+            <marker date="1484698539000" expanded="true" signature="725:4462" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="752:4460" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="886:1571" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1226:1468" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1797:2239" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2456:3562" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2964:3433" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3679:4078" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="4180:4454" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <marker date="1484781878000" expanded="true" signature="0:601" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="192:289" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="316:599" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484786451000" expanded="true" signature="6:147" ph="..." />
+            <marker date="1484786451000" expanded="true" signature="180:1215" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="229:1213" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="551:1207" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/CardEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1484786400000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484786400000" expanded="true" signature="169:1016" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="212:1014" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="568:1005" ph="/* public const string TableName = &quot;Cards&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="79" lean-forward="false" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
+          <folding>
+            <marker date="1484698824000" expanded="true" signature="6:455" ph="..." />
+            <marker date="1484698824000" expanded="true" signature="505:2223" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="584:2221" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="693:751" ph="{...}" />
             <marker date="1484698824000" expanded="false" signature="876:1953" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="902:1723" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="1001:1252" ph="{...}" />
@@ -375,15 +737,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <marker date="1484790728000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484790728000" expanded="true" signature="169:1087" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="212:1012" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="1041:1085" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckRoundEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484786467000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484786467000" expanded="true" signature="169:919" ph="{...}" />
+            <marker date="1484786467000" expanded="true" signature="217:917" ph="{...}" />
+            <marker date="1484786467000" expanded="true" signature="458:911" ph="/* public const string TableName = &quot;DeckRounds&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckCardRoundEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1484786417000" expanded="true" signature="6:102" ph="..." />
+            <marker date="1484786417000" expanded="true" signature="135:1185" ph="{...}" />
+            <marker date="1484786417000" expanded="true" signature="187:1183" ph="{...}" />
+            <marker date="1484786417000" expanded="true" signature="495:1176" ph="/* public const string TableName = &quot;DeckCardRounds&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484786451000" expanded="true" signature="6:147" ph="..." />
+            <marker date="1484786451000" expanded="true" signature="180:1215" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="229:1213" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="551:1207" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/CardEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484786400000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484786400000" expanded="true" signature="169:1016" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="212:1014" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="568:1005" ph="/* public const string TableName = &quot;Cards&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="30" column="79" lean-forward="false" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1484698824000" expanded="true" signature="6:455" ph="..." />
             <marker date="1484698824000" expanded="true" signature="505:2223" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="584:2221" ph="{...}" />
-            <marker date="1484698824000" expanded="false" signature="693:751" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="693:751" ph="{...}" />
             <marker date="1484698824000" expanded="false" signature="876:1953" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="902:1723" ph="{...}" />
             <marker date="1484698824000" expanded="true" signature="1001:1252" ph="{...}" />
@@ -396,67 +823,423 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckCardRoundEntity.cs">
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/project.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="285">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <marker date="1484698539000" expanded="true" signature="6:102" ph="..." />
-            <marker date="1484698539000" expanded="true" signature="135:1217" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="187:1215" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="527:1208" ph="/* public const string TableName = &quot;DeckCardRounds&quot;; ... */" />
+            <marker date="1484781878000" expanded="true" signature="0:601" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="192:289" ph="{...}" />
+            <marker date="1484781878000" expanded="true" signature="316:599" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="0:2113" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="22:1020" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="57:131" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1036:1359" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1169:1353" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1241:1343" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1380:1530" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1407:1524" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1432:1514" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1553:1635" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1660:1744" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1690:1738" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1769:1938" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1790:1932" ph="[...]" />
+            <marker date="1484698539000" expanded="true" signature="1956:2111" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1981:2105" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484783344000" expanded="true" signature="0:453" ph="{...}" />
+            <marker date="1484783344000" expanded="true" signature="44:77" ph="{...}" />
+            <marker date="1484783344000" expanded="true" signature="97:283" ph="{...}" />
+            <marker date="1484783344000" expanded="true" signature="301:451" ph="{...}" />
+            <marker date="1484783344000" expanded="true" signature="328:445" ph="{...}" />
+            <marker date="1484783344000" expanded="true" signature="353:435" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/TokenProxy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="55" column="55" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="55" selection-end-column="55" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="6:687" ph="..." />
+            <marker date="1484698539000" expanded="true" signature="725:4462" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="752:4460" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="886:1571" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1226:1468" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1797:2239" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2456:3562" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2964:3433" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3679:4078" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="4180:4454" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Token/Repository/UserRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="6:139" ph="..." />
+            <marker date="1484698539000" expanded="true" signature="181:357" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="242:355" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="328:349" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/Repository/DeckRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <marker date="1484784013000" expanded="true" signature="6:102" ph="..." />
+            <marker date="1484784013000" expanded="true" signature="143:320" ph="{...}" />
+            <marker date="1484784013000" expanded="true" signature="205:318" ph="{...}" />
+            <marker date="1484784013000" expanded="true" signature="291:312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Api/ILogin.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1484784194000" expanded="true" signature="6:118" ph="..." />
+            <marker date="1484784194000" expanded="true" signature="159:589" ph="{...}" />
+            <marker date="1484784194000" expanded="true" signature="255:587" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1484784639000" expanded="true" signature="0:736" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="15:162" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="61:158" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="175:305" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="333:428" ph="{...}" />
+            <marker date="1484784639000" expanded="true" signature="453:734" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1484784880000" expanded="true" signature="6:758" ph="..." />
+            <marker date="1484784880000" expanded="true" signature="788:3358" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="815:3356" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="949:1336" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="1629:2315" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="1744:1935" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2350:2803" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2523:2740" ph="{...}" />
+            <marker date="1484784880000" expanded="true" signature="2914:3350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Authenticate/Controllers/UserController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1484698824000" expanded="true" signature="6:455" ph="..." />
+            <marker date="1484698824000" expanded="true" signature="505:2223" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="584:2221" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="693:751" ph="{...}" />
+            <marker date="1484698824000" expanded="false" signature="876:1953" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="902:1723" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1001:1252" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1096:1232" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1505:1587" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1755:1943" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="1838:1927" ph="{...}" />
+            <marker date="1484698824000" expanded="true" signature="2010:2214" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/UserProxy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="56:224" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="85:222" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/CardEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
-            <marker date="1484698539000" expanded="true" signature="6:136" ph="..." />
-            <marker date="1484698539000" expanded="true" signature="169:1032" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="212:1030" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="584:1021" ph="/* public const string TableName = &quot;Cards&quot;; ... */" />
+            <marker date="1484786400000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484786400000" expanded="true" signature="169:1016" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="212:1014" ph="{...}" />
+            <marker date="1484786400000" expanded="true" signature="568:1005" ph="/* public const string TableName = &quot;Cards&quot;; ... */" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckCardRoundEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
-            <marker date="1484698539000" expanded="true" signature="6:147" ph="..." />
-            <marker date="1484698539000" expanded="true" signature="180:1247" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="229:1245" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="583:1239" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
+            <marker date="1484786417000" expanded="true" signature="6:102" ph="..." />
+            <marker date="1484786417000" expanded="true" signature="135:1185" ph="{...}" />
+            <marker date="1484786417000" expanded="true" signature="187:1183" ph="{...}" />
+            <marker date="1484786417000" expanded="true" signature="495:1176" ph="/* public const string TableName = &quot;DeckCardRounds&quot;; ... */" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckRoundEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <marker date="1484698539000" expanded="true" signature="6:136" ph="..." />
-            <marker date="1484698539000" expanded="true" signature="169:935" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="217:933" ph="{...}" />
-            <marker date="1484698539000" expanded="true" signature="474:927" ph="/* public const string TableName = &quot;DeckRounds&quot;; ... */" />
+            <marker date="1484786467000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484786467000" expanded="true" signature="169:919" ph="{...}" />
+            <marker date="1484786467000" expanded="true" signature="217:917" ph="{...}" />
+            <marker date="1484786467000" expanded="true" signature="458:911" ph="/* public const string TableName = &quot;DeckRounds&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/JoinedDeckEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <marker date="1484786451000" expanded="true" signature="6:147" ph="..." />
+            <marker date="1484786451000" expanded="true" signature="180:1215" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="229:1213" ph="{...}" />
+            <marker date="1484786451000" expanded="true" signature="551:1207" ph="/* public const string TableName = &quot;JoinedDeck&quot;; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/UserEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="6:70" ph="..." />
+            <marker date="1484698539000" expanded="true" signature="103:551" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="146:549" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <marker date="1484787555000" expanded="true" signature="6:361" ph="..." />
+            <marker date="1484787555000" expanded="true" signature="387:2101" ph="{...}" />
+            <marker date="1484787555000" expanded="true" signature="414:2099" ph="{...}" />
+            <marker date="1484787555000" expanded="true" signature="468:1153" ph="{...}" />
+            <marker date="1484787555000" expanded="true" signature="808:1050" ph="{...}" />
+            <marker date="1484787555000" expanded="true" signature="1379:1596" ph="{...}" />
+            <marker date="1484787555000" expanded="true" signature="1813:2093" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Migrations/20170119011707_1.0.0.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="144" column="60" lean-forward="false" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
+          <folding>
+            <marker date="1484788975000" expanded="true" signature="6:95" ph="..." />
+            <marker date="1484788975000" expanded="true" signature="132:8243" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="176:8241" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="252:7685" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="390:881" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="920:1017" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="1148:1992" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="2031:2426" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="2557:3003" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="3042:3437" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="3573:3786" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="3825:4230" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="4367:4579" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="4618:5330" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="5470:5756" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="5795:6536" ph="{...}" />
+            <marker date="1484788975000" expanded="true" signature="7758:8235" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Api/IUser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <marker date="1484784821000" expanded="true" signature="6:118" ph="..." />
+            <marker date="1484784821000" expanded="true" signature="159:452" ph="{...}" />
+            <marker date="1484784821000" expanded="true" signature="188:450" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Proxy/DeckProxy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1484789869000" expanded="true" signature="6:76" ph="..." />
+            <marker date="1484789869000" expanded="true" signature="119:777" ph="{...}" />
+            <marker date="1484789869000" expanded="true" signature="148:775" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Payload/PaginedPayload.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <marker date="1484790565000" expanded="true" signature="43:219" ph="{...}" />
+            <marker date="1484790565000" expanded="true" signature="77:217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Application/Repository/EFRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+          <folding>
+            <marker date="1484698539000" expanded="true" signature="6:164" ph="..." />
+            <marker date="1484698539000" expanded="true" signature="212:4043" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="284:4041" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="384:444" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="487:554" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="620:729" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="784:923" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="998:1119" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1165:1254" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1323:1435" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1481:1551" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1620:1732" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1784:1862" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="1958:2049" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2144:2234" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2292:2361" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2454:2536" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2589:2662" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2750:2831" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="2912:2991" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3038:3100" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3148:3299" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3226:3289" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3354:3542" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3432:3495" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3552:4035" ph="IDisposable" />
+            <marker date="1484698539000" expanded="true" signature="3667:3898" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3709:3853" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3754:3839" ph="{...}" />
+            <marker date="1484698539000" expanded="true" signature="3929:4015" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Flashmind.Data/Entity/DeckEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484779997000" expanded="true" signature="6:136" ph="..." />
-            <marker date="1484779997000" expanded="true" signature="169:874" ph="{...}" />
-            <marker date="1484779997000" expanded="true" signature="212:799" ph="{...}" />
-            <marker date="1484779997000" expanded="true" signature="828:872" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="6:136" ph="..." />
+            <marker date="1484790728000" expanded="true" signature="169:1087" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="212:1012" ph="{...}" />
+            <marker date="1484790728000" expanded="true" signature="1041:1085" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flashmind.Api.Deck/Controllers/DeckController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+          <folding>
+            <marker date="1484790846000" expanded="true" signature="6:420" ph="..." />
+            <marker date="1484790846000" expanded="true" signature="462:6352" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="541:6350" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="735:837" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="942:2338" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="968:2104" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="1172:1322" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="1384:1498" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="1828:2048" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2136:2328" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2221:2312" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2481:3888" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2507:3654" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2711:2861" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="2923:3037" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="3378:3598" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="3686:3878" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="3771:3862" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="4031:5505" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="4057:5271" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="4261:4411" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="4473:4587" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="4995:5215" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="5303:5495" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="5388:5479" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="5564:5768" ph="{...}" />
+            <marker date="1484790846000" expanded="true" signature="6079:6344" ph="{...}" />
           </folding>
         </state>
       </provider>
