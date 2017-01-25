@@ -9,17 +9,17 @@ namespace Flashmind.Data.Entity
     {
 
         [Required]
-        public Guid UserForeignKey { get; set; }
+        public Guid UserId { get; set; }
 
         //Virtual
-        [ForeignKey("UserForeignKey")]
+        [ForeignKey("UserId")]
         public UserEntity User { get; set; }
 
         [Required]
-        public Guid DeckForeignKey { get; set; }
+        public Guid DeckId { get; set; }
 
         //Virtual
-        [ForeignKey("DeckForeignKey")]
+        [ForeignKey("DeckId")]
         public DeckEntity Deck { get; set; }
 
 

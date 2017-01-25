@@ -9,9 +9,9 @@ namespace Flashmind.Data.Entity
     {
         public double Score { get; set; }
 
-        public Guid DeckForeignKey { get; set; }
+        public Guid DeckId { get; set; }
 
-        [ForeignKey("DeckForeignKey")]
+        [ForeignKey("DeckId")]
         public DeckEntity Deck { get; set; }
 
         public List<DeckCardRoundEntity> DeckCardRounds { get; set; }
