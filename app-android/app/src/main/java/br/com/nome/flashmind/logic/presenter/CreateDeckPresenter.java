@@ -9,14 +9,15 @@ import br.com.nome.flashmind.ui.view.IBaseView;
  * Created by Alessandro Pryds on 17/01/2017.
  */
 public class CreateDeckPresenter {
+    private final String mDeckName;
     private ICreateDeckView mView;
     private ArrayList<Card> mCards;
     private int mCurrentRotation;
     private int mCurrentPosition;
-    private String mSelectedCountry;
 
-    public CreateDeckPresenter(ICreateDeckView view) {
+    public CreateDeckPresenter(ICreateDeckView view, String deckName) {
         this.mView = view;
+        this.mDeckName = deckName;
         this.mCurrentRotation = 0;
         this.mCurrentPosition = 0;
         this.mView.setPresenter(this);
@@ -25,8 +26,9 @@ public class CreateDeckPresenter {
     public void start() {
         this.mCards = new ArrayList<>();
         this.mCards.add(new Card());
-        mView.initToolbar();
+        mView.initToolbar(mDeckName);
         mView.setupDeckViewPager(mCards);
+        mView.setNameDeckTextView(mDeckName);
     }
 
     public void onBtnFlipTouched() {
@@ -59,15 +61,11 @@ public class CreateDeckPresenter {
         mView.newCardAdded();
     }
 
-    public void onBtnLanguageTouched() {
-    }
-
-
 
     public interface ICreateDeckView extends IBaseView{
         void setPresenter(CreateDeckPresenter presenter);
 
-        void initToolbar();
+        void initToolbar(String title);
 
         void setupDeckViewPager(ArrayList<Card> mDecks);
 
@@ -81,5 +79,6 @@ public class CreateDeckPresenter {
 
         void newCardAdded();
 
+        void setNameDeckTextView(String mDeckName);
     }
 }

@@ -4,6 +4,7 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.rd.PageIndicatorView;
 import com.thebluealliance.spectrum.SpectrumDialog;
@@ -55,6 +57,9 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
     @BindView(R.id.btnSave)
     protected Button btnSave;
 
+    @BindView(R.id.tvDeckName)
+    protected TextInputEditText tvDeckName;
+
     @BindView(R.id.ivColorSelected)
     protected ImageView ivColorSelected;
 
@@ -75,7 +80,8 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         setContentView(R.layout.activity_create_deck);
         ButterKnife.bind(this);
 
-        new CreateDeckPresenter(this);
+        String deckName = (String) getIntent().getExtras().get(FlashMindConstants.INTENT_TAG_DECK_NAME);
+        new CreateDeckPresenter(this,deckName);
     }
 
     @Override
@@ -116,7 +122,7 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
     //endregion
 
     //region Button Actions
-    @OnClick({R.id.btnColor, R.id.ivColorSelected, R.id.btnFlip})
+    @OnClick({R.id.btnColor, R.id.ivColorSelected, R.id.btnFlip, R.id.container_tags})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnColor:
@@ -125,6 +131,9 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
                 break;
             case R.id.btnFlip:
                 mPresenter.onBtnFlipTouched();
+                break;
+            case R.id.container_tags:
+                Toast.makeText(this, "asd", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -138,13 +147,11 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
     }
 
     @Override
-    public void initToolbar() {
-        String deckName = (String) getIntent().getExtras().get(FlashMindConstants.INTENT_TAG_DECK_NAME);
-
+    public void initToolbar(String title) {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(deckName);
+        getSupportActionBar().setTitle(title);
     }
 
     @Override
@@ -214,6 +221,11 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         vpAdapter.notifyDataSetChanged();
         pageIndicatorView.setCount(vpAdapter.getCount());
         vpCards.setCurrentItem(vpAdapter.getCount());
+    }
+
+    @Override
+    public void setNameDeckTextView(String deckName) {
+        tvDeckName.setText(deckName);
     }
 
     //endregion

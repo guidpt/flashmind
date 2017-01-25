@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="8dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -44,35 +45,6 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:paddingBottom="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="4dp"
-                android:src="@drawable/ic_whatshot_black_24dp"
-                android:tint="@color/colorPrimary" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/container_tags"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
-                android:theme="@style/InputEditTextBase">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/etTags"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/LABEL_DECK_TAGS" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
 
         <android.support.percent.PercentRelativeLayout
             android:layout_width="match_parent"
@@ -124,15 +96,50 @@
                     android:id="@+id/etLanguage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:enabled="false"
                     android:hint="@string/LABEL_DECK_LANGUAGE" />
             </android.support.design.widget.TextInputLayout>
 
         </android.support.percent.PercentRelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_whatshot_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/container_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:theme="@style/InputEditTextBase">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:enabled="false"
+                    android:hint="@string/LABEL_DECK_TAGS" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button_round"
             android:text="@string/BUTTON_SAVE_DECK_TEXT"
             android:textColor="@android:color/white" />
