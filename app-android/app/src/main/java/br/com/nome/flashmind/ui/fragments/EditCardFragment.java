@@ -22,17 +22,16 @@ import br.com.nome.flashmind.R;
 import br.com.nome.flashmind.application.FlashMindApplication;
 import br.com.nome.flashmind.application.FlashMindConstants;
 import br.com.nome.flashmind.logic.model.Card;
+import br.com.nome.flashmind.logic.presenter.EditCardPresenter;
 import br.com.nome.flashmind.logic.rxbus.RxQueues;
 import br.com.nome.flashmind.logic.rxbus.events.FlipCardEvent;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Observer;
-import rx.Subscriber;
 import rx.Subscription;
-import rx.functions.Func1;
 
-public class EditCardFragment extends Fragment {
+public class EditCardFragment extends Fragment implements EditCardPresenter.IEditCardView {
 
 
     @BindView(R.id.flipView)
@@ -52,6 +51,7 @@ public class EditCardFragment extends Fragment {
     private int mPosition;
     private boolean isBack;
     private Subscription mSubscriptionFront, mSubscriptionBack;
+    private EditCardPresenter mPresenter;
 
     public EditCardFragment() {
         // Required empty public constructor
@@ -70,6 +70,8 @@ public class EditCardFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPosition = getArguments().getInt(FlashMindConstants.BUNDLE_TAG_POSITION);
+        Card card = getArguments().getParcelable(FlashMindConstants.BUNDLE_TAG_CARD);
+        new EditCardPresenter(card, mPosition, this);
     }
 
     @Override
@@ -77,17 +79,67 @@ public class EditCardFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edit_card, container, false);
         ButterKnife.bind(this, view);
+        this.mPresenter.start();
+        return view;
+    }
 
+    @Override
+    public void onDestroyView() {
+        if (mFlipCardSubscription != null && !mFlipCardSubscription.isUnsubscribed()) {
+            mFlipCardSubscription.unsubscribe();
+        }
+        if (mSubscriptionFront != null && !mSubscriptionFront.isUnsubscribed()) {
+            mSubscriptionFront.unsubscribe();
+        }
+        if (mSubscriptionBack != null && !mSubscriptionBack.isUnsubscribed()) {
+            mSubscriptionBack.unsubscribe();
+        }
+
+        super.onDestroyView();
+    }
+
+    @Override
+    public void setPresenter(EditCardPresenter presenter) {
+        this.mPresenter = presenter;
+    }
+
+    @Override
+    public void showLabel() {
+        Transition fade = new Fade(Fade.IN);
+        TransitionManager.beginDelayedTransition(flipView, fade);
+        tvFrontLabel.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLabel() {
+        Transition fade = new Fade(Fade.OUT);
+        TransitionManager.beginDelayedTransition(flipView, fade);
+        tvFrontLabel.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showBackLabel() {
+        Transition fade = new Fade(Fade.IN);
+        TransitionManager.beginDelayedTransition(flipView, fade);
+        tvBackLabel.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideBackLabel() {
+        Transition fade = new Fade(Fade.OUT);
+        TransitionManager.beginDelayedTransition(flipView, fade);
+        tvBackLabel.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void createSubscriptions() {
         tvBackLabel.setVisibility(View.GONE);
         tvFrontLabel.setVisibility(View.GONE);
+
         Observable<CharSequence> observableBack = RxTextView.textChanges(etBack);
         Observable<CharSequence> observableFront = RxTextView.textChanges(etFront);
-        mSubscriptionFront = observableFront.map(new Func1<CharSequence, Boolean>() {
-            @Override
-            public Boolean call(CharSequence charSequence) {
-                return charSequence.length() > 0;
-            }
-        }).subscribe(new Subscriber<Boolean>() {
+
+        mSubscriptionFront = observableFront.subscribe(new Observer<CharSequence>() {
             @Override
             public void onCompleted() {
 
@@ -99,27 +151,12 @@ public class EditCardFragment extends Fragment {
             }
 
             @Override
-            public void onNext(Boolean contains) {
-                Transition fade;
-                if(contains) {
-                    fade = new Fade(Fade.IN);
-                    TransitionManager.beginDelayedTransition(flipView, fade);
-                    tvFrontLabel.setVisibility(View.VISIBLE);
-                    return;
-                }else{
-                    fade = new Fade(Fade.OUT);
-                    TransitionManager.beginDelayedTransition(flipView, fade);
-                    tvFrontLabel.setVisibility(View.GONE);
-                }
+            public void onNext(CharSequence charSequence) {
+                mPresenter.onFrontTextTyped(charSequence.toString());
             }
         });
 
-        mSubscriptionBack = observableBack.map(new Func1<CharSequence, Boolean>() {
-            @Override
-            public Boolean call(CharSequence charSequence) {
-                return charSequence.length() > 0;
-            }
-        }).subscribe(new Subscriber<Boolean>() {
+        mSubscriptionBack = observableBack.subscribe(new Observer<CharSequence>() {
             @Override
             public void onCompleted() {
 
@@ -131,20 +168,11 @@ public class EditCardFragment extends Fragment {
             }
 
             @Override
-            public void onNext(Boolean contains) {
-                Transition fade;
-                if(contains) {
-                    fade = new Fade(Fade.IN);
-                    TransitionManager.beginDelayedTransition(flipView, fade);
-                    tvBackLabel.setVisibility(View.VISIBLE);
-                    return;
-                }else{
-                    fade = new Fade(Fade.OUT);
-                    TransitionManager.beginDelayedTransition(flipView, fade);
-                    tvBackLabel.setVisibility(View.GONE);
-                }
+            public void onNext(CharSequence charSequence) {
+                mPresenter.onBackTextTyped(charSequence.toString());
             }
         });
+
 
         mFlipCardSubscription = FlashMindApplication.getRxBus().subscribe(RxQueues.FLIP_CARD_EVENT, new Observer<FlipCardEvent>() {
             @Override
@@ -176,15 +204,6 @@ public class EditCardFragment extends Fragment {
                 }
             }
         });
-        return view;
-    }
-
-    @Override
-    public void onDestroyView() {
-        if (mFlipCardSubscription != null && !mFlipCardSubscription.isUnsubscribed()) {
-            mFlipCardSubscription.unsubscribe();
-        }
-        super.onDestroyView();
     }
 
     //region

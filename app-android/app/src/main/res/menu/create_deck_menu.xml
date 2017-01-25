@@ -7,4 +7,10 @@
         android:icon="@drawable/ic_image_white_24dp"
         android:title="@string/MENU_IMAGE"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_add_circle_outline_white_24dp"
+        android:title="@string/MENU_ADD_CARD"
+        app:showAsAction="always" />
 </menu>

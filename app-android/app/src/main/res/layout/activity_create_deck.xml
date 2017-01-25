@@ -8,8 +8,6 @@
     android:fitsSystemWindows="true"
     tools:context="br.com.nome.flashmind.ui.activity.CreateDeckActivity">
 
-    <include layout="@layout/content_create_deck" />
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:id="@+id/appBarLayout"
@@ -52,5 +50,7 @@
             app:piv_animationType="worm"
             app:piv_viewPager="@id/vpCards" />
     </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_create_deck" />
 
 </android.support.design.widget.CoordinatorLayout>

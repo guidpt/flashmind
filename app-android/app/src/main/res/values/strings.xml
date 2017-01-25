@@ -34,4 +34,11 @@
     <string name="MENU_IMAGE_ASPECT">Resolução</string>
     <string name="MENU_IMAGE">Carregar imagem</string>
     <string name="DIALOG_TITLE_COLOR_PICKER">Selecione uma cor</string>
+    <string name="LABEL_TYPE_SEARCH">Digite uma palavra chave</string>
+    <string name="DIALOG_TITLE_IMAGE_SEARCH">Adicionar imagem</string>
+    <string name="MENU_ADD_CARD">Adicionar carta</string>
+    <string name="BUTTON_SAVE_DECK_TEXT">Salvar deck</string>
+    <string name="DIALOG_TITLE_LANGUAGE_PICKER">Selecione um idioma</string>
+    <string name="LABEL_DECK_TAGS">Tags</string>
+    <string name="LABEL_DECK_LANGUAGE">Linguagem</string>
 </resources>

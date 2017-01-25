@@ -5,4 +5,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="textMediumSize">18sp</dimen>
     <dimen name="grid_layout_margin">8dp</dimen>
+    <dimen name="button_radius">5dp</dimen>
 </resources>

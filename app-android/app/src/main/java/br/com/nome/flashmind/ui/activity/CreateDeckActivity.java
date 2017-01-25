@@ -2,15 +2,16 @@ package br.com.nome.flashmind.ui.activity;
 
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -30,6 +31,7 @@ import br.com.nome.flashmind.logic.presenter.CreateDeckPresenter;
 import br.com.nome.flashmind.logic.rxbus.RxQueues;
 import br.com.nome.flashmind.logic.rxbus.events.FlipCardEvent;
 import br.com.nome.flashmind.ui.adapter.EditCardViewPagerAdapter;
+import br.com.nome.flashmind.ui.fragments.SearchImageFragment;
 import br.com.nome.flashmind.utils.DisableWhenAnimatingListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,23 +39,36 @@ import butterknife.OnClick;
 
 public class CreateDeckActivity extends BaseActivity implements CreateDeckPresenter.ICreateDeckView {
 
-    @BindView(R.id.vpCards)
-    protected ViewPager vpCards;
-    @BindView(R.id.btnFlip)
-    protected ImageButton btnFlip;
+    private static final String COUNTRY_PICKER_REQUEST_CODE = "COUNTRY_PICKER";
+
     @BindView(R.id.root)
     protected CoordinatorLayout root;
-    @BindView(R.id.btnColor)
-    protected ImageButton btnColor;
-    @BindView(R.id.ivColorSelected)
-    protected ImageView ivColorSelected;
     @BindView(R.id.toolbar)
     protected Toolbar toolbar;
     @BindView(R.id.appBarLayout)
     protected AppBarLayout appBarLayout;
+
+    @BindView(R.id.btnFlip)
+    protected ImageButton btnFlip;
+    @BindView(R.id.btnColor)
+    protected ImageButton btnColor;
+    @BindView(R.id.btnSave)
+    protected Button btnSave;
+
+    @BindView(R.id.ivColorSelected)
+    protected ImageView ivColorSelected;
+
+    @BindView(R.id.vpCards)
+    protected ViewPager vpCards;
+    @BindView(R.id.pageIndicatorView)
+    protected PageIndicatorView pageIndicatorView;
+
     private CreateDeckPresenter mPresenter;
+    private EditCardViewPagerAdapter vpAdapter;
     private boolean isImageSelect;
 
+
+    //region Android Lifecycle
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,10 +107,13 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
             case R.id.image:
                 mPresenter.onMenuImageTouched();
                 break;
+            case R.id.add:
+                mPresenter.onMenuAddTouched();
+                break;
         }
         return true;
     }
-
+    //endregion
 
     //region Button Actions
     @OnClick({R.id.btnColor, R.id.ivColorSelected, R.id.btnFlip})
@@ -131,7 +149,7 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
 
     @Override
     public void setupDeckViewPager(ArrayList<Card> mCards) {
-        EditCardViewPagerAdapter vpAdapter = new EditCardViewPagerAdapter(getSupportFragmentManager(), mCards);
+        vpAdapter = new EditCardViewPagerAdapter(getSupportFragmentManager(), mCards);
         vpCards.setAdapter(vpAdapter);
         vpCards.setOffscreenPageLimit(3);
         vpCards.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -150,7 +168,6 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
 
             }
         });
-        PageIndicatorView pageIndicatorView = (PageIndicatorView) findViewById(R.id.pageIndicatorView);
         pageIndicatorView.setViewPager(vpCards);
     }
 
@@ -164,8 +181,10 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
     }
 
     @Override
-    public void navigateToLoadImage() {
-
+    public void showImageSearchDialog() {
+        FragmentManager fm = getSupportFragmentManager();
+        SearchImageFragment searchImageFragment = SearchImageFragment.newInstance();
+        searchImageFragment.show(fm, "fragment_search_image");
     }
 
     @Override
@@ -173,14 +192,12 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         new SpectrumDialog.Builder(this)
                 .setColors(R.array.card_colors)
                 .setDismissOnColorSelected(true)
-                .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
-                    @Override
-                    public void onColorSelected(boolean positiveResult, @ColorInt int color) {
-                        if (positiveResult) {
-                            mPresenter.onColorSelected(color);
-                        }
+                .setOnColorSelectedListener((positiveResult, color) -> {
+                    if (positiveResult) {
+                        mPresenter.onColorSelected(color);
                     }
-                }).build().show(getSupportFragmentManager(), "colorDialog");
+                }).build()
+                .show(getSupportFragmentManager(), "colorDialog");
     }
 
     @Override
@@ -189,6 +206,15 @@ public class CreateDeckActivity extends BaseActivity implements CreateDeckPresen
         btnColor.setColorFilter(color, PorterDuff.Mode.SRC_IN);
         toolbar.setBackgroundColor(color);
         appBarLayout.setBackgroundColor(color);
+        btnSave.setBackgroundColor(color);
     }
+
+    @Override
+    public void newCardAdded() {
+        vpAdapter.notifyDataSetChanged();
+        pageIndicatorView.setCount(vpAdapter.getCount());
+        vpCards.setCurrentItem(vpAdapter.getCount());
+    }
+
     //endregion
 }

@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 25
@@ -11,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -18,8 +20,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
+greendao {
+    schemaVersion 1
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -36,7 +45,7 @@ dependencies {
 
     //Butterknife - View Injection
     compile 'com.jakewharton:butterknife:8.4.0'
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 
     //Retrofit - A type-safe HTTP client for Android and Java
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
@@ -44,7 +53,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
     //HttpLogInterceptor - a network interceptor for log all http requests
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
 
     //Glide - Glide is a open source media management and image loading framework
     compile 'com.github.bumptech.glide:glide:3.7.0'
@@ -83,4 +92,12 @@ dependencies {
     //ColorPicker
     compile 'com.thebluealliance:spectrum:0.7.1'
     compile 'com.wada811:android-material-design-colors:3.0.0'
+
+    //FloatingSearchView
+    compile 'com.github.renaudcerrato:FloatingSearchView:1.0.1'
+
+    //GrendDAO ORM
+    compile 'org.greenrobot:greendao:3.2.0'
+
+
 }

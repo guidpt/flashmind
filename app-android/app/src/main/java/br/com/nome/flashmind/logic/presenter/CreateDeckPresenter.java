@@ -13,6 +13,7 @@ public class CreateDeckPresenter {
     private ArrayList<Card> mCards;
     private int mCurrentRotation;
     private int mCurrentPosition;
+    private String mSelectedCountry;
 
     public CreateDeckPresenter(ICreateDeckView view) {
         this.mView = view;
@@ -22,16 +23,10 @@ public class CreateDeckPresenter {
     }
 
     public void start() {
-        this.mCards = createSampleCardList();
+        this.mCards = new ArrayList<>();
+        this.mCards.add(new Card());
         mView.initToolbar();
         mView.setupDeckViewPager(mCards);
-    }
-
-    private ArrayList<Card> createSampleCardList() {
-        ArrayList<Card> cards = new ArrayList<>();
-        for(int i = 0; i < 5; i++)
-            cards.add(new Card());
-        return cards;
     }
 
     public void onBtnFlipTouched() {
@@ -44,7 +39,7 @@ public class CreateDeckPresenter {
     }
 
     public void onMenuImageTouched() {
-        mView.navigateToLoadImage();
+        mView.showImageSearchDialog();
     }
 
     public void onMenuAspectTouched() {
@@ -59,6 +54,16 @@ public class CreateDeckPresenter {
         mView.tintDeck(color);
     }
 
+    public void onMenuAddTouched() {
+        mCards.add(new Card());
+        mView.newCardAdded();
+    }
+
+    public void onBtnLanguageTouched() {
+    }
+
+
+
     public interface ICreateDeckView extends IBaseView{
         void setPresenter(CreateDeckPresenter presenter);
 
@@ -68,10 +73,13 @@ public class CreateDeckPresenter {
 
         void flipView(int mCurrentPosition, int mCurrenRotation);
 
-        void navigateToLoadImage();
+        void showImageSearchDialog();
 
         void showColorPickerDialog();
 
         void tintDeck(int color);
+
+        void newCardAdded();
+
     }
 }

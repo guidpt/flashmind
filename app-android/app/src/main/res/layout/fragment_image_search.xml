@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mypopsy.widget.FloatingSearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:background="#90000000"
+        android:hint="@string/LABEL_TYPE_SEARCH"
+        app:logo="@drawable/ic_menu_three_dots"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+</LinearLayout>

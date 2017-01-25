@@ -23,14 +23,12 @@ public class EditCardViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            default:
-                return EditCardFragment.newInstance(position, mCards.get(position));
-        }
+        return EditCardFragment.newInstance(position, mCards.get(position));
     }
 
     @Override
     public int getCount() {
         return mCards.size();
     }
+
 }

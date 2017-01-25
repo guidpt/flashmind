@@ -1,50 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_create_deck"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="br.com.nome.flashmind.ui.activity.CreateDeckActivity"
     tools:showIn="@layout/activity_create_deck">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
-        android:theme="@style/InputEditTextBase">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/tvDeckName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/LABEL_DECK_NAME" />
-    </android.support.design.widget.TextInputLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
 
-        <ImageButton
-            android:id="@+id/btnColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_palette_black_24dp"
-            android:tint="@color/colorPrimary" />
-
-        <ImageView
-            android:id="@+id/ivColorSelected"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:src="@drawable/shape_round_5dp"
-            android:tint="@color/colorPrimary" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_whatshot_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/InputEditTextBase">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tvDeckName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/LABEL_DECK_NAME" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_whatshot_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/container_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:theme="@style/InputEditTextBase">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/LABEL_DECK_TAGS" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_palette_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/ivColorSelected"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/btnColor"
+                android:src="@drawable/shape_round_5dp"
+                android:tint="@color/colorPrimary"
+                app:layout_widthPercent="40%" />
+
+            <ImageView
+                android:id="@+id/ivLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivColorSelected"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_whatshot_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivLanguage"
+                android:paddingBottom="8dp"
+                android:theme="@style/InputEditTextBase"
+                app:layout_widthPercent="40%">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/LABEL_DECK_LANGUAGE" />
+            </android.support.design.widget.TextInputLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_round"
+            android:text="@string/BUTTON_SAVE_DECK_TEXT"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>
